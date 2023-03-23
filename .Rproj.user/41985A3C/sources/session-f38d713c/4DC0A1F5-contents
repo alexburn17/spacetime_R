@@ -1,7 +1,7 @@
 # load the reticulate package  
 library(reticulate)
 
-#setwd("~/Documents/GitHub/spacetime_R")
+setwd("~/Documents/GitHub/spacetime_R")
 
 # activate environment
 use_condaenv(condaenv = "barra_python", conda = "auto", required = FALSE)
