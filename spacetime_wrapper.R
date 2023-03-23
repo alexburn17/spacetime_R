@@ -23,19 +23,11 @@ source_python("spacetime/operations/cubeToDataframe.py", convert = F)
 # Begin R script
 ########################################################################################################################
 
-# get tif files from CpCM folder
-dataPaths <- list.files(path="CpCM", pattern="*.tif", full.names=TRUE, recursive=FALSE)
 
 
 #############################################
 ######### spacetime function wrappers #######
 #############################################
-
-
-
-
-
-
 
 # read data R wrapper
 read.data <- function(data){
@@ -65,7 +57,7 @@ raster.align <- function(data, resolution, SRS, noneVal){
 
 
 
-make.cube <- function(data, fileName, organizeFiles = "filestotime", organizeBands="bandstotime", varNames="None", timeObj="None"){
+make.cube <- function(data, fileName, organizeFiles, organizeBands, varNames = "None", timeObj = "None"){
   # align rasters
   if(varNames == "None" & timeObj == "None"){
     newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeFiles=organizeFiles)
@@ -200,51 +192,6 @@ get_var_names <- function(obj){
 }
 
 
-
-
-
-ds <- read.data(dataPaths)
-newObj = raster_align(data=ds, noneVal = -9999, SRS=4326)  
-trimmed = raster.trim(newObj)
-cube = make.cube(data = trimmed, fileName = "c44.nc4", organizeFiles = "filestotime", organizeBands = "bandstotime")
-
-
-
-
-t <- get_time(x)
-t
-
-
-
-
-
-
-
-
-
-
-
-
-# read in data
-ds = read_data(dataPaths)
-
-# align rasters
-newObj = raster_align(data=ds, noneVal = -9999, SRS=4326)  
-
-# trim the rasters to the same greatest common bounding box
-trimmed = raster_trim(newObj)
-
-# make the aligned file object into a cube with a time element (writes the new file to disk)
-cube = make_cube(data = trimmed, fileName = "cpcm.nc4", organizeFiles = "filestotime", organizeBands = "bandstotime")
-
-
-
-#x <- trimmed$get_data_array()
-
-#array(x)
-
-
-#matrix(x[[1]])
 
 
 
