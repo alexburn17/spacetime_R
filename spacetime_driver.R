@@ -5,7 +5,7 @@ source("spacetime_wrapper.R")
 
 library(devtools)
 
-
+install_github("alexburn17/spacetime_R")
 
 
 
