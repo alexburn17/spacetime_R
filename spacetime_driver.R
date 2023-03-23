@@ -2,6 +2,16 @@ source("spacetime_wrapper.R")
 
 
 
+
+library(devtools)
+
+
+
+
+
+
+
+
 # get tif files from CpCM folder
 dataPaths <- list.files(path="CpCM", pattern="*.tif", full.names=TRUE, recursive=FALSE)
 
