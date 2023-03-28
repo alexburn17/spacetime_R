@@ -3,7 +3,7 @@ library(reticulate)
 
 
 # python packages to install
-dependancies <- c("pandas", "numpy", "netCDF4", "gdal")
+dependancies <- c("pandas", "numpy", "netCDF4")
 
 # install python
 py_install(
@@ -13,8 +13,7 @@ py_install(
   python_version = "3.9.16",
   pip = TRUE
 )
-
-#conda_install("r-reticulate", "gdal")
+conda_install("r-reticulate", "gdal")
 
 
 # activate environment
