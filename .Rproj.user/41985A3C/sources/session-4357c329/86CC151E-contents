@@ -17,6 +17,7 @@ py_install(
 conda_install("r-reticulate", "gdal")
 conda_install("r-reticulate", "xarray")
 conda_install("r-reticulate", "psutil")
+conda_install("r-reticulate", "plotly_express")
 
 # activate environment
 use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
