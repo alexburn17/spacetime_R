@@ -16,7 +16,7 @@ py_install(
 
 
 # activate environment
-use_condaenv(condaenv = "r-reticulate", conda = "auto", required = FALSE)
+use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
 
 
 
