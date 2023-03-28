@@ -15,6 +15,7 @@ py_install(
 )
 
 conda_install("r-reticulate", "gdal")
+conda_install("r-reticulate", "xarray")
 
 # activate environment
 use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
