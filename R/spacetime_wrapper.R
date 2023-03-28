@@ -3,7 +3,7 @@ library(reticulate)
 
 
 # python packages to install
-dependancies <- c("pandas", "osgeo", "numpy", "netCDF4")
+dependancies <- c("pandas", "GDAL", "numpy", "netCDF4")
 
 # install python
 py_install(
