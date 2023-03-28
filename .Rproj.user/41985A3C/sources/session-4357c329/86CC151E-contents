@@ -13,8 +13,8 @@ py_install(
   python_version = "3.9.16",
   pip = TRUE
 )
-conda_install("r-reticulate", "gdal")
 
+conda_install("r-reticulate", "gdal")
 
 # activate environment
 use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
