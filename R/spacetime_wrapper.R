@@ -24,8 +24,6 @@ use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
 
 
 
-
-
 # source modules
 source_python("spacetime/input/readData.py", convert = F)
 source_python("spacetime/scale/rasterAlign.py", convert = F)
@@ -48,6 +46,14 @@ source_python("spacetime/operations/cubeToDataframe.py", convert = F)
 #############################################
 ######### spacetime function wrappers #######
 #############################################
+
+
+
+
+do_a_thing<- function(data){
+  t <- data+3
+  return(t)
+}
 
 # read data R wrapper
 read.data <- function(data){

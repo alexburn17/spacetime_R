@@ -1,16 +1,10 @@
-setwd("~/Documents/GitHub/spacetime_R")
-install.packages("roxygen2")
-
-source("R/spacetime_wrapper.R")
-
-
 
 
 library(devtools)
 
 install_github("alexburn17/spacetime_R")
 
-
+library(spacetime)
 
 
 
@@ -26,6 +20,12 @@ trimmed = raster.trim(newObj)
 cube = make.cube(data = trimmed, fileName = "c44.nc4", organizeFiles = "filestotime", organizeBands = "bandstotime")
 
 
+
+
+#setwd("~/Documents/GitHub/spacetime_R")
+#install.packages("roxygen2")
+
+#source("R/spacetime_wrapper.R")
 
 
 

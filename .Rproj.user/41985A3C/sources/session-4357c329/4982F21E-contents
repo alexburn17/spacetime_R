@@ -1,31 +1,34 @@
-setwd("~/Documents/GitHub/spacetime_R")
-install.packages("roxygen2")
-
-source("R/spacetime_wrapper.R")
-
-
 
 
 library(devtools)
 
 install_github("alexburn17/spacetime_R")
 
-
+library(spacetime)
 
 
 
 
 # get tif files from CpCM folder
-dataPaths <- list.files(path="CpCM", pattern="*.tif", full.names=TRUE, recursive=FALSE)
+dataPaths <- list.files(path="/Users/pburnham/Documents/data", pattern="*.tif", full.names=TRUE, recursive=FALSE)
+
+
+ds <- spacetime::read.data(dataPaths)
 
 
 
-ds <- read.data(dataPaths)
+
 newObj = raster_align(data=ds, noneVal = -9999, SRS=4326)  
 trimmed = raster.trim(newObj)
 cube = make.cube(data = trimmed, fileName = "c44.nc4", organizeFiles = "filestotime", organizeBands = "bandstotime")
 
 
+
+
+#setwd("~/Documents/GitHub/spacetime_R")
+#install.packages("roxygen2")
+
+#source("R/spacetime_wrapper.R")
 
 
 
