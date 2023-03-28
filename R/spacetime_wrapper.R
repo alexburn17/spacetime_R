@@ -14,7 +14,7 @@ py_install(
   pip = TRUE
 )
 
-conda_install("r-reticulate", "gdal")
+#conda_install("r-reticulate", "gdal")
 
 
 # activate environment
