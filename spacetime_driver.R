@@ -10,11 +10,15 @@ library(spacetime)
 
 
 # get tif files from CpCM folder
-dataPaths <- list.files(path="CpCM", pattern="*.tif", full.names=TRUE, recursive=FALSE)
+dataPaths <- list.files(path="/Users/pburnham/Documents/data", pattern="*.tif", full.names=TRUE, recursive=FALSE)
+
+
+ds <- spacetime::read.data(dataPaths)
+
+spacetime::do_a_thing(3)
 
 
 
-ds <- read.data(dataPaths)
 newObj = raster_align(data=ds, noneVal = -9999, SRS=4326)  
 trimmed = raster.trim(newObj)
 cube = make.cube(data = trimmed, fileName = "c44.nc4", organizeFiles = "filestotime", organizeBands = "bandstotime")

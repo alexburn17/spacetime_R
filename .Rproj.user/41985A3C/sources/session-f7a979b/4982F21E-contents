@@ -15,6 +15,7 @@ dataPaths <- list.files(path="/Users/pburnham/Documents/data", pattern="*.tif", 
 
 ds <- spacetime::read.data(dataPaths)
 
+spacetime::do_a_thing(3)
 
 
 

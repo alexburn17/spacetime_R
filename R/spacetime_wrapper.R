@@ -1,4 +1,7 @@
 # load the reticulate package  
+
+install.packages("reticulate")
+
 library(reticulate)
 
 
