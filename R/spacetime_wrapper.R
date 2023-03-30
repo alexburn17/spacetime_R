@@ -15,12 +15,12 @@ dependancies <- c("pandas", "numpy")
   
 print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
   
-install_miniconda(path = miniconda_path(), update = FALSE, force = TRUE)
+install_miniconda(path = miniconda_path(), update = TRUE, force = TRUE)
 
 
 py_install(
   packages = dependancies,
-  envname = "r-miniconda",
+  envname = "auto",
   method = "conda",
   python_version = "3.9.16",
   pip = TRUE

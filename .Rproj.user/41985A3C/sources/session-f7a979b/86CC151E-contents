@@ -20,7 +20,7 @@ install_miniconda(path = miniconda_path(), update = TRUE, force = TRUE)
 
 py_install(
   packages = dependancies,
-  envname = "r-miniconda",
+  envname = "auto",
   method = "conda",
   python_version = "3.9.16",
   pip = TRUE
