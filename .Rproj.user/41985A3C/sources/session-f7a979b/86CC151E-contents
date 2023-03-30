@@ -72,6 +72,8 @@ do_a_thing<- function(data){
 # read data R wrapper
 read.data <- function(data){
   
+  source_python("spacetime/input/readData.py", convert = F)
+  
   ds = read_data(data)
   return(ds)
 }
