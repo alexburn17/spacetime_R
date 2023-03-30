@@ -34,7 +34,7 @@ if(sum(checkInstall) == 0){
   print("installing python 3.9.16")
   # install python
   py_install(
-    packages = dependancies,
+    packages,
     envname = "r-reticulate",
     method = "conda",
     python_version = "3.9.16",
