@@ -7,6 +7,8 @@ install_github("alexburn17/spacetime_R")
 
 library(spacetime)
 
+configure_environment(package = "spacetime", force = FALSE)
+
 
 
 
