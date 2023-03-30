@@ -20,7 +20,7 @@ install_miniconda(path = miniconda_path(), update = FALSE, force = TRUE)
 
 py_install(
   packages = dependancies,
-  envname = "r-reticulate",
+  envname = "r-miniconda",
   method = "conda",
   python_version = "3.9.16",
   pip = TRUE
