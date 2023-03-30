@@ -1,7 +1,7 @@
 # load the reticulate package  
 
 print("installing miniconda, a python package manger. If it is already installed, this step will be skipped.")
-install_miniconda(path = miniconda_path(), update = TRUE, force = FALSE)
+install_miniconda(path = miniconda_path(), update = TRUE, force = TRUE)
 
 
 library(reticulate)
