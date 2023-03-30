@@ -7,8 +7,7 @@ install_github("alexburn17/spacetime_R")
 
 library(spacetime)
 
-
-
+spacetime::do_a_thing(3)
 
 
 
@@ -18,7 +17,6 @@ dataPaths <- list.files(path="/Users/pburnham/Documents/data", pattern="*.tif", 
 
 ds <- spacetime::read.data(data=dataPaths)
 
-spacetime::do_a_thing(3)
 
 
 
