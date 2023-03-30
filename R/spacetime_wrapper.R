@@ -1,13 +1,15 @@
 # load the reticulate package  
 
+print("installing miniconda, a python package manger. If it is already installed, this step will be skipped.")
 install_miniconda(path = miniconda_path(), update = TRUE, force = FALSE)
 
-library(reticulate)
 
+library(reticulate)
 
 # python packages to install
 dependancies <- c("pandas", "numpy", "netCDF4")
 
+print("installing python 3.9.16")
 # install python
 py_install(
   packages = dependancies,
@@ -17,6 +19,7 @@ py_install(
   pip = TRUE
 )
 
+print("installing required python packages")
 conda_install("r-reticulate", "gdal")
 conda_install("r-reticulate", "xarray")
 conda_install("r-reticulate", "psutil")
