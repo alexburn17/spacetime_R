@@ -1,9 +1,3 @@
-# load the reticulate package  
-
-
-#install_miniconda(path = miniconda_path(), update = TRUE, force = FALSE)
-
-#conda_list()
 
 library(reticulate)
 
@@ -13,9 +7,8 @@ dependancies <- c("pandas", "numpy")
 
 
   
-print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
-  
-install_miniconda(path = miniconda_path(), update = TRUE, force = TRUE)
+#print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
+#install_miniconda(path = miniconda_path(), update = TRUE, force = TRUE)
 
 
 py_install(
@@ -35,6 +28,7 @@ conda_install("r-reticulate", "netCDF4")
 
 # activate environment
 use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
+
 
 
 
@@ -65,12 +59,18 @@ source_python("spacetime/operations/cubeToDataframe.py", convert = F)
 
 
 do_a_thing<- function(data){
-  t <- data+3
+  
+  source_python("spacetime/input/test.py", convert = F)
+  
+  t <- get_array()
+  
   return(t)
 }
 
 # read data R wrapper
 read.data <- function(data){
+  
+  source_python("spacetime/input/readData.py", convert = F)
   
   ds = read_data(data)
   return(ds)

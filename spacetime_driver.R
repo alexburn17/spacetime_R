@@ -10,11 +10,13 @@ library(spacetime)
 
 
 
+
+
 # get tif files from CpCM folder
 dataPaths <- list.files(path="/Users/pburnham/Documents/data", pattern="*.tif", full.names=TRUE, recursive=FALSE)
 
 
-ds <- spacetime::read.data(dataPaths)
+ds <- spacetime::read.data(data=dataPaths)
 
 spacetime::do_a_thing(3)
 
