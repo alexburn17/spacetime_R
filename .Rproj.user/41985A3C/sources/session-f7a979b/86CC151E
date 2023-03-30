@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/spacetime_R/R/spacetime_wrapper.R",
     "project_path": "R/spacetime_wrapper.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "2269421724",
     "contents": "",
     "dirty": false,
     "created": 1680026449100.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "59,16",
-        "scrollLine": "46"
+        "cursorPosition": "17,0",
+        "scrollLine": "9"
     },
     "folds": "",
-    "lastKnownWriteTime": 1680186725,
+    "lastKnownWriteTime": 1680189562,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1680186725814,
+    "last_content_update": 1680189562861,
     "read_only": false,
     "read_only_alternatives": []
 }

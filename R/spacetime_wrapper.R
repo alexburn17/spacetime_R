@@ -11,13 +11,11 @@ library(reticulate)
 dependancies <- c("pandas", "numpy")
 
 
-checkInstall <- rowSums("r-reticulate" == conda_list()) > 0 
 
-if(sum(checkInstall) == 0){
   
-  print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
+print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
   
-  conda_install(
+conda_install(
     envname = "r-reticulate",
     packages = dependancies,
     forge = TRUE,
@@ -29,19 +27,6 @@ if(sum(checkInstall) == 0){
     python_version = "3.9.16"
   )
   
-} else {
-  
-  print("installing python 3.9.16")
-  # install python
-  py_install(
-    packages = dependancies,
-    envname = "r-reticulate",
-    method = "conda",
-    python_version = "3.9.16",
-    pip = TRUE
-  )
-  
-}
 
 
 
