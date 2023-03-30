@@ -8,7 +8,7 @@
 library(reticulate)
 
 # python packages to install
-
+dependancies <- c("pandas", "numpy")
 
 
 checkInstall <- rowSums("r-reticulate" == conda_list()) > 0 
@@ -19,7 +19,7 @@ if(sum(checkInstall) == 0){
   
   conda_install(
     envname = "r-reticulate",
-    packages,
+    packages = dependancies,
     forge = TRUE,
     channel = character(),
     pip = FALSE,
@@ -34,7 +34,7 @@ if(sum(checkInstall) == 0){
   print("installing python 3.9.16")
   # install python
   py_install(
-    packages,
+    packages = dependancies,
     envname = "r-reticulate",
     method = "conda",
     python_version = "3.9.16",
@@ -51,7 +51,6 @@ conda_install("r-reticulate", "xarray")
 conda_install("r-reticulate", "psutil")
 conda_install("r-reticulate", "plotly_express")
 conda_install("r-reticulate", "netCDF4")
-conda_install("r-reticulate", "pandas")
 
 # activate environment
 use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
