@@ -12,10 +12,10 @@ dependancies <- c("pandas", "numpy", "netCDF4")
 
 
 conda_install(
-  envname = r-reticulate,
+  envname = "r-reticulate",
   packages = dependancies,
   forge = TRUE,
-  channel = character(),
+  channel = caracter(),
   pip = FALSE,
   pip_options = character(),
   pip_ignore_installed = FALSE,
