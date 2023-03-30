@@ -18,18 +18,13 @@ print("installing anaconda, a python package manger. If it is already installed,
 install_miniconda(path = miniconda_path(), update = FALSE, force = TRUE)
 
 
-conda_install(
-    envname = "r-reticulate",
-    packages = dependancies,
-    forge = TRUE,
-    channel = character(),
-    pip = FALSE,
-    pip_options = character(),
-    pip_ignore_installed = FALSE,
-    conda = "auto",
-    python_version = "3.9.16"
-  )
-  
+py_install(
+  packages = dependancies,
+  envname = "r-reticulate",
+  method = "conda",
+  python_version = "3.9.16",
+  pip = TRUE
+)
 
 print("installing required python packages")
 conda_install("r-reticulate", "gdal")

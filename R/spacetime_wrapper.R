@@ -15,20 +15,16 @@ dependancies <- c("pandas", "numpy")
   
 print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
   
-conda_install(
-    envname = "r-reticulate",
-    packages = dependancies,
-    forge = TRUE,
-    channel = character(),
-    pip = FALSE,
-    pip_options = character(),
-    pip_ignore_installed = FALSE,
-    conda = "auto",
-    python_version = "3.9.16"
-  )
-  
+install_miniconda(path = miniconda_path(), update = FALSE, force = TRUE)
 
 
+py_install(
+  packages = dependancies,
+  envname = "r-reticulate",
+  method = "conda",
+  python_version = "3.9.16",
+  pip = TRUE
+)
 
 print("installing required python packages")
 conda_install("r-reticulate", "gdal")
