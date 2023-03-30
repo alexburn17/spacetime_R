@@ -1,6 +1,6 @@
 # load the reticulate package  
 
-#print("installing miniconda, a python package manger. If it is already installed, this step will be skipped.")
+
 #install_miniconda(path = miniconda_path(), update = TRUE, force = FALSE)
 
 #conda_list()
@@ -9,6 +9,8 @@ library(reticulate)
 
 # python packages to install
 dependancies <- c("pandas", "numpy", "netCDF4")
+
+print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
 
 conda_install(
   envname = "r-reticulate",
