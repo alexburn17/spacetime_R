@@ -8,37 +8,49 @@
 library(reticulate)
 
 # python packages to install
-dependancies <- c("pandas", "numpy", "netCDF4")
-
-print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
-conda_install(
-  envname = "r-reticulate",
-  packages = dependancies,
-  forge = TRUE,
-  channel = character(),
-  pip = FALSE,
-  pip_options = character(),
-  pip_ignore_installed = FALSE,
-  conda = "auto",
-  python_version = "3.9.16"
-)
 
 
-#print("installing python 3.9.16")
-# install python
-#py_install(
-#  packages = dependancies,
-#  envname = "r-reticulate",
-#  method = "conda",
-#  python_version = "3.9.16",
-#  pip = TRUE
-#)
+
+checkInstall <- rowSums("r-reticulate" == conda_list()) > 0 
+
+if(sum(checkInstall) == 0){
+  
+  print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
+  
+  conda_install(
+    envname = "r-reticulate",
+    packages,
+    forge = TRUE,
+    channel = character(),
+    pip = FALSE,
+    pip_options = character(),
+    pip_ignore_installed = FALSE,
+    conda = "auto",
+    python_version = "3.9.16"
+  )
+  
+} else {
+  
+  print("installing python 3.9.16")
+  # install python
+  py_install(
+    packages = dependancies,
+    envname = "r-reticulate",
+    method = "conda",
+    python_version = "3.9.16",
+    pip = TRUE
+  )
+  
+}
+
+
 
 print("installing required python packages")
 conda_install("r-reticulate", "gdal")
 conda_install("r-reticulate", "xarray")
 conda_install("r-reticulate", "psutil")
 conda_install("r-reticulate", "plotly_express")
+conda_install("r-reticulate", "netCDF4")
 
 # activate environment
 use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
