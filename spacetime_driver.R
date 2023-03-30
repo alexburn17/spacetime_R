@@ -4,6 +4,7 @@ library(devtools)
 
 install_github("alexburn17/spacetime_R")
 
+
 library(spacetime)
 
 
