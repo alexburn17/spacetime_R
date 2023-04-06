@@ -1,4 +1,6 @@
 import numpy as np
+from osgeo import gdal
+import os
 
 def get_array():
 

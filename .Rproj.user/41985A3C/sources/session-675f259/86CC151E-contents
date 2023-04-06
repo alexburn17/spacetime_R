@@ -5,8 +5,6 @@ library(reticulate)
 dependancies <- c("pandas", "numpy")
 
 
-
-  
 #print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
 #install_miniconda(path = miniconda_path(), update = TRUE, force = TRUE)
 
@@ -55,14 +53,12 @@ source_python("spacetime/operations/cubeToDataframe.py", convert = F)
 ######### spacetime function wrappers #######
 #############################################
 
-
-
-
 do_a_thing<- function(data){
   
   library(reticulate)
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   source_python("spacetime/input/test.py", convert = F)
+  
   
   t <- get_array()
   
