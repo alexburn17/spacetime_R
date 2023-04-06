@@ -3,6 +3,8 @@
   library(reticulate)
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
+  print("it ran")
+  
   source_python("spacetime/input/test.py", convert = F)
   source_python("spacetime/input/readData.py", convert = F)
   source_python("spacetime/scale/rasterAlign.py", convert = F)

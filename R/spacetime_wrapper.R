@@ -55,6 +55,8 @@ conda_install("r-reticulate", "netCDF4")
 
 do_a_thing<- function(data){
   
+  source_python("spacetime/input/test.py", convert = F)
+  
 
   t <- get_array()
   
