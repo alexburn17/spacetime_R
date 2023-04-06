@@ -10,18 +10,21 @@ library(spacetime)
 spacetime::do_a_thing(3)
 
 
+library(reticulate)
+use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
+
 
 # get tif files from CpCM folder
 dataPaths <- list.files(path="/Users/pburnham/Documents/data", pattern="*.tif", full.names=TRUE, recursive=FALSE)
 
 
-ds <- spacetime::read.data(data=dataPaths)
+outPut <- spacetime::read.data(data=dataPaths)
+
+get_lat(outPut)
 
 
-
-
-newObj = raster_align(data=ds, noneVal = -9999, SRS=4326)  
-trimmed = raster.trim(newObj)
+newObj <- raster.align(data=outPut, noneVal = -9999, SRS=4326, resolution = .008)  
+trimmed = raster.trim(outPut)
 cube = make.cube(data = trimmed, fileName = "c44.nc4", organizeFiles = "filestotime", organizeBands = "bandstotime")
 
 

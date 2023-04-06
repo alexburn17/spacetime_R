@@ -55,11 +55,7 @@ source_python("spacetime/operations/cubeToDataframe.py", convert = F)
 
 do_a_thing<- function(data){
   
-  library(reticulate)
-  use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
-  source_python("spacetime/input/test.py", convert = F)
-  
-  
+
   t <- get_array()
   
   return(t)

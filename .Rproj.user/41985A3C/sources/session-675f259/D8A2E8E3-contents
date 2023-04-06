@@ -1,8 +1,0 @@
-Package: spacetime
-Version: 0.1
-Date: 2023-03-23
-Title: Spacetime
-Description: A package for working with complex spatiotemporal datasets.
-Author: P. Alexander Burnham <pburnham@uvm.edu>
-Maintainer: P. Alexander Burnham <pburnham@uvm.edu>
-Imports: reticulate
