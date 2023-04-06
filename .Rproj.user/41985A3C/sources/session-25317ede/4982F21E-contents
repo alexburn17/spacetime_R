@@ -10,8 +10,7 @@ library(spacetime)
 spacetime::do_a_thing(3)
 
 
-library(reticulate)
-use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
+
 
 
 # get tif files from CpCM folder

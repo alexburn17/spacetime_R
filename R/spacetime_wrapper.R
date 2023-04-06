@@ -25,7 +25,7 @@ conda_install("r-reticulate", "plotly_express")
 conda_install("r-reticulate", "netCDF4")
 
 # activate environment
-use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
+#use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
 
 
 
@@ -63,8 +63,6 @@ do_a_thing<- function(data){
 
 # read data R wrapper
 read.data <- function(data){
-  
-  source_python("spacetime/input/readData.py", convert = F)
   
   ds = read_data(data)
   return(ds)
