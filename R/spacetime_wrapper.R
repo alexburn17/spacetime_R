@@ -25,8 +25,7 @@ conda_install("r-reticulate", "plotly_express")
 conda_install("r-reticulate", "netCDF4")
 
 # activate environment
-#use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
-
+use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
 
 # source modules
 source_python("spacetime/input/test.py", convert = F)
