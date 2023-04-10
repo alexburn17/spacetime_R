@@ -1,4 +1,4 @@
 # Export all names
 exportPattern(".")
 import(reticulate)
-export(stga)
+export(get_array)
