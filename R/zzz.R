@@ -5,8 +5,13 @@ spacetime_mod <- NULL
   library(reticulate)
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
 
-  spacetime_mod <<- reticulate::source_python("python/input/spacetime_test.py", convert = F)
+  spacetime_mod <<- reticulate::source_python(system.file("python/input",
+                                                          "spacetime_test.py",
+                                                          package = "spacetime",
+                                                          mustWork = TRUE
+  ))
   
+
   
   #reticulate::py_run_file(system.file("python/input/test.py", package = "spacetime"))
   
