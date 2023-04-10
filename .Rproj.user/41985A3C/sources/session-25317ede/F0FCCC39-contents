@@ -5,7 +5,7 @@
   
   stga <- NULL
   
-  stga <<- reticulate::import_from_path("stga", system.file("python", "input/test.py", package = packageName(), mustWork = TRUE))
+  stga <<- reticulate::import_from_path("test", system.file("python", "input/test.py", package = packageName(), mustWork = TRUE))
   
   
   
