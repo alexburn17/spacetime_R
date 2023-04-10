@@ -4,7 +4,7 @@ get_array <- NULL
   
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
-  reticulate::import_from_path(module = "spacetime_test", system.file("python", "spacetime_test.py", package = "spacetime", mustWork = TRUE))
+  reticulate::import_from_path(module = "spacetime_test", system.file("python/input", "spacetime_test.py", package = "spacetime", mustWork = TRUE))
 
   
 
