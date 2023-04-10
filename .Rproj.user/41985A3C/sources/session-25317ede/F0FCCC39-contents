@@ -2,7 +2,15 @@
   
   library(reticulate)
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
-  reticulate::py_run_file(system.file("python/input/test.py", package = "spacetime"))
+  
+  test <- NULL
+  
+  test <<- reticulate::import_from_path("test", system.file("python", "input/test.py", package = packageName(), mustWork = TRUE))
+  
+  
+  
+  
+  #reticulate::py_run_file(system.file("python/input/test.py", package = "spacetime"))
   
   
   
