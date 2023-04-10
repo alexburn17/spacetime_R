@@ -1,5 +1,4 @@
 # Export all names
 exportPattern(".")
 import(reticulate)
-export(spacetime_test)
 export(get_array)
