@@ -56,6 +56,8 @@ conda_install("r-reticulate", "netCDF4")
 
 do_a_thing<- function(data){
   
+  reticulate::source_python(system.file("python/input", "spacetime_test.py", package = "spacetime", mustWork = TRUE), envir=globalenv())
+  
   
   t <- get_array()
   
@@ -65,8 +67,7 @@ do_a_thing<- function(data){
 # read data R wrapper
 read.data <- function(data){
   
-  reticulate::source_python(system.file("python/input", "spacetime_test.py", package = "spacetime", mustWork = TRUE), envir=globalenv())
-  
+ 
   ds = read_data(data)
   return(ds)
 }
