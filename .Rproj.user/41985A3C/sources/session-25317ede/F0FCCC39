@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/spacetime_R/R/zzz.R",
     "project_path": "R/zzz.R",
     "type": "r_source",
-    "hash": "2228634479",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1681131077175.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "21,90",
-        "scrollLine": "1"
+        "cursorPosition": "9,2",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1681132718,
+    "lastKnownWriteTime": 1681133006,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1681132718754,
+    "last_content_update": 1681133006786,
     "read_only": false,
     "read_only_alternatives": []
 }

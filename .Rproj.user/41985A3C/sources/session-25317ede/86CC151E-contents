@@ -56,9 +56,8 @@ conda_install("r-reticulate", "netCDF4")
 
 do_a_thing<- function(data){
   
-  source_python("./inst/python/input/test.py", convert = F)
   
-  t <- get_array()
+  t <- spacetime::stga$get_array()
   
   return(t)
 }

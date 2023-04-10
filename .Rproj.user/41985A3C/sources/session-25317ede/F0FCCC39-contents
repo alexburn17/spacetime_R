@@ -3,9 +3,9 @@
   library(reticulate)
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
-  test <- NULL
+  stga <- NULL
   
-  test <<- reticulate::import_from_path("test", system.file("python", "input/test.py", package = packageName(), mustWork = TRUE))
+  stga <<- reticulate::import_from_path("stga", system.file("python", "input/test.py", package = packageName(), mustWork = TRUE))
   
   
   
