@@ -3,11 +3,9 @@
   library(reticulate)
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
-  stga <- NULL
-  
-  stga <<- reticulate::import_from_path("test", system.file("python", "input/test.py", package = packageName(), mustWork = TRUE))
-  
-  
+  get_array <- NULL
+  st_test <- reticulate::import_from_path("test", system.file("python", "input/test.py", package = packageName(), mustWork = TRUE))
+  get_array <<- st_test$get_array 
   
   
   #reticulate::py_run_file(system.file("python/input/test.py", package = "spacetime"))
