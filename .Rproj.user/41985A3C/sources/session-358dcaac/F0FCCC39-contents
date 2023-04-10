@@ -1,11 +1,12 @@
+spacetime_mod <- NULL
+
 .onLoad <- function(libname, pkgname) {
   
   library(reticulate)
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
-  
-  get_array <- NULL
-  st_test <- reticulate::import_from_path("spacetime_test", system.file("python", "input/spacetime_test.py", package = "spacetime", mustWork = TRUE))
-  get_array <<- st_test$get_array 
+
+  spacetime_mod <<- reticulate::import_from_path("spacetime_test", system.file("python", "input/spacetime_test.py", package = packageName(), mustWork = TRUE))
+
   
   
   #reticulate::py_run_file(system.file("python/input/test.py", package = "spacetime"))
