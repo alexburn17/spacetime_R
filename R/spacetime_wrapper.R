@@ -11,8 +11,8 @@ dependancies <- c("pandas", "numpy")
 
 py_install(
   packages = dependancies,
-  envname = "auto",
   method = "conda",
+  conda = "auto",
   python_version = "3.9.16",
   pip = TRUE
 )
