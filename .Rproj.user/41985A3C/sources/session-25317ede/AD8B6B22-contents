@@ -9,12 +9,6 @@ library(spacetime)
 
 
 
-
-
-
-
-
-
 spacetime::do_a_thing(3)
 
 
