@@ -4,12 +4,10 @@ get_array <- NULL
   
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
-  #reticulate::import_from_path(module = "spacetime_test", system.file("python/input", "spacetime_test.py", package = "spacetime", mustWork = TRUE))
+  the_mod <- reticulate::import_from_path(module = "spacetime_test", system.file("python", "input", package = "spacetime", mustWork = TRUE))
+  get_array <<- the_mod$get_array
+  
 
-  
-  reticulate::source_python(system.file("python/input", "spacetime_test.py", package = "spacetime", mustWork = TRUE), envir=globalenv())
-  
-  
   
   
 #  user_permission <- utils::askYesNo("Install miniconda? downloads 50MB and takes time")

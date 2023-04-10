@@ -56,11 +56,3 @@ cube = make.cube(data = trimmed, fileName = "c44.nc4", organizeFiles = "filestot
 
 
 
-
-
-
-
-
-
-
-
