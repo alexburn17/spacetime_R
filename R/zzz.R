@@ -4,7 +4,7 @@
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
   get_array <- NULL
-  st_test <- reticulate::import_from_path("test", system.file("python", "input/test.py", package = packageName(), mustWork = TRUE))
+  st_test <- reticulate::import_from_path("test.py", system.file("python", "input", package = packageName(), mustWork = TRUE))
   get_array <<- st_test$get_array 
   
   
