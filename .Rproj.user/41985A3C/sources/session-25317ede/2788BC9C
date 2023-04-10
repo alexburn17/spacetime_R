@@ -1,19 +1,17 @@
 {
-    "id": "97489282",
-    "path": "~/Documents/GitHub/spacetime_R/inst/python/input/test.py",
-    "project_path": "inst/python/input/test.py",
+    "id": "2788BC9C",
+    "path": "~/Documents/GitHub/spacetime_R/inst/python/input/spacetime_test.py",
+    "project_path": "inst/python/input/spacetime_test.py",
     "type": "python",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1681130583070.0,
+    "created": 1681134977374.0,
     "source_on_save": false,
-    "relative_order": 5,
+    "relative_order": 6,
     "properties": {
         "source_window_id": "",
-        "Source": "Source",
-        "cursorPosition": "5,2",
-        "scrollLine": "0"
+        "Source": "Source"
     },
     "folds": "",
     "lastKnownWriteTime": 1681130170,
