@@ -57,7 +57,7 @@ conda_install("r-reticulate", "netCDF4")
 do_a_thing<- function(data){
   
   
-  t <- spacetime::get_array()
+  t <- get_array()
   
   return(t)
 }

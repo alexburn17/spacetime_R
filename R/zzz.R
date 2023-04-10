@@ -5,10 +5,10 @@ get_array <- NULL
   library(reticulate)
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
 
-  spacetime_test <- reticulate::import_from_path("spacetime_test", (system.file("python/input",
+  spacetime_test <<- reticulate::source_python(system.file("python/input",
                                                           "spacetime_test.py",
                                                           package = "spacetime",
-                                                          mustWork = TRUE)))
+                                                          mustWork = TRUE))
   get_array <<- spacetime_test$get_array
 
 
