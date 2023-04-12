@@ -6,7 +6,7 @@ get_array <- NULL
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
   the_mod <- reticulate::import_from_path(module = "spacetimetest", system.file("python", "input", package = "spacetime", mustWork = TRUE))
-  #read_d <- reticulate::import_from_path(module = "readdata", system.file("python", "input", package = "spacetime", mustWork = TRUE))
+  #read_d <- reticulate::import_from_path(module = "readdata", system.file("python", "readdata.py", package = "spacetime", mustWork = TRUE))
   
   
   get_array <<- the_mod$get_array
