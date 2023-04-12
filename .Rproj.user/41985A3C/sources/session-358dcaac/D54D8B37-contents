@@ -4,12 +4,6 @@ library(reticulate)
 dependancies <- c("pandas", "numpy")
 
 
-#print("installing anaconda, a python package manger. If it is already installed, this step will be skipped.")
-#install_miniconda(path = miniconda_path(), update = TRUE, force = TRUE)
-
-
-
-
 
 py_install(
   packages = dependancies,
