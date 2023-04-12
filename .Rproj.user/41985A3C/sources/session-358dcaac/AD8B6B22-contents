@@ -24,7 +24,7 @@ outPut <- spacetime::read.data(data=dataPaths)
 
 
 
-get_lat(outPut)
+spacetime::get_lat(outPut)
 
 
 newObj <- raster.align(data=outPut, noneVal = -9999, SRS=4326, resolution = .008)  

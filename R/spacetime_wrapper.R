@@ -90,7 +90,7 @@ make.cube <- function(data, fileName, organizeFiles, organizeBands, varNames = "
 #############################################
 
 # get lat wrapper
-get_lat <- function(obj){
+get.lat <- function(obj){
   
   x = obj$get_lat()
   return(x)
