@@ -37,7 +37,7 @@ do_a_thing<- function(data){
 }
 
 # read data R wrapper
-read.data <- function(data){
+read_data <- function(data){
  
   ds = read_data(data)
   return(ds)
@@ -45,14 +45,14 @@ read.data <- function(data){
 
 
 # read data R wrapper
-raster.trim <- function(data){
+raster_trim <- function(data){
   
   ds = raster_trim(data)
   return(ds)
 }
 
 
-raster.align <- function(data, resolution, SRS, noneVal){
+raster_align <- function(data, resolution, SRS, noneVal){
   
   # align rasters
   newObj = raster_align(data=data, resolution=resolution, SRS=SRS, noneVal=noneVal)
@@ -64,7 +64,7 @@ raster.align <- function(data, resolution, SRS, noneVal){
 
 
 
-make.cube <- function(data, fileName, organizeFiles, organizeBands, varNames = "None", timeObj = "None"){
+make_cube <- function(data, fileName, organizeFiles, organizeBands, varNames = "None", timeObj = "None"){
   # align rasters
   if(varNames == "None" & timeObj == "None"){
     newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeFiles=organizeFiles)
@@ -90,9 +90,9 @@ make.cube <- function(data, fileName, organizeFiles, organizeBands, varNames = "
 #############################################
 
 # get lat wrapper
-get.lat <- function(obj){
+get_lat <- function(obj){
   
-  x = obj$get_lat()
+  x = py_to_r(obj$get_lat())
   return(x)
 }
 
