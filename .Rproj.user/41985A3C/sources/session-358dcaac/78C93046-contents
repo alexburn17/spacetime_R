@@ -1,21 +1,21 @@
 get_array <- NULL
-#read_data <- NULL
+read_data <- NULL
 
 .onLoad <- function(libname, pkgname) {
 
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
   the_mod <- reticulate::import_from_path(module = "spacetimetest", system.file("python", "input", package = "spacetime", mustWork = TRUE))
-  #read_d <- reticulate::import_from_path(module = "readdata", system.file("python", "readdata.py", package = "spacetime", mustWork = TRUE))
+  read_d <- reticulate::import_from_path(module = "readdata", system.file("python", "input", package = "spacetime", mustWork = TRUE))
   
   
   get_array <<- the_mod$get_array
-  #read_data <<- read_d$read_data
+  read_data <<- read_d$read_data
   
   
 }
   
-  
+"/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/spacetime/python/input/readdata.py"
   
   
 
