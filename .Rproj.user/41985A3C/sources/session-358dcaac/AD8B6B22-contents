@@ -12,11 +12,17 @@ library(spacetime)
 spacetime::do_a_thing(3)
 
 
+spacetime::install_miniconda(3)
+
 # get tif files from CpCM folder
 dataPaths <- list.files(path="/Users/pburnham/Documents/data", pattern="*.tif", full.names=TRUE, recursive=FALSE)
 
 
 outPut <- spacetime::read.data(data=dataPaths)
+
+
+
+
 
 get_lat(outPut)
 

@@ -16,7 +16,7 @@ library(reticulate)
 
 
 
-install_miniconda <- function(data){
+install_miniconda <- function(){
   
   user_permission <- utils::askYesNo("Install miniconda? downloads 50MB and takes time")
 
@@ -26,7 +26,6 @@ install_miniconda <- function(data){
     message("You should run `reticulate::install_miniconda()` before using this package")
   }
 
-return(t)
 }
 
 
