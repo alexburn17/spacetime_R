@@ -2,4 +2,3 @@
 exportPattern(".")
 import(reticulate)
 export(get_array)
-export(read_data)

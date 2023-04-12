@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/spacetime_R/NAMESPACE",
     "project_path": "NAMESPACE",
     "type": "r_namespace",
-    "hash": "0",
+    "hash": "255797300",
     "contents": "",
     "dirty": false,
     "created": 1680790687994.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "4,17",
+        "cursorPosition": "4,0",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1681316239,
+    "lastKnownWriteTime": 1681317376,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1681316239115,
+    "last_content_update": 1681317376049,
     "read_only": false,
     "read_only_alternatives": []
 }
