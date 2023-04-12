@@ -92,7 +92,7 @@ make_cube <- function(data, fileName, organizeFiles, organizeBands, varNames = "
 # get lat wrapper
 get_lat <- function(obj){
   
-  x = py_to_r(obj$get_lat())
+  x = obj$get_lat()
   return(x)
 }
 
@@ -100,14 +100,14 @@ get_lat <- function(obj){
 # get lon wrapper
 get_lon <- function(obj){
   
-  x = py_to_r(obj$get_lon())
+  x = obj$get_lon()
   return(x)
 }
 
 # get UL corner wrapper
 get_UL_corner <- function(obj){
   
-  x = py_to_r(obj$get_UL_corner())
+  x = obj$get_UL_corner()
 
   return(x)
 }
@@ -116,7 +116,7 @@ get_UL_corner <- function(obj){
 # get EPSG code wrapper
 get_epsg_code <- function(obj){
   
-  x = py_to_r(obj$get_epsg_code())
+  x = obj$get_epsg_code()
   
   return(x)
 }
@@ -126,7 +126,7 @@ get_epsg_code <- function(obj){
 # get units wrapper
 get_units <- function(obj){
   
-  x = py_to_r(obj$get_units())
+  x = obj$get_units()
   
   return(x)
 }
@@ -135,7 +135,7 @@ get_units <- function(obj){
 # get band number wrapper
 get_band_number <- function(obj){
   
-  x = py_to_r(obj$get_band_number())
+  x = obj$get_band_number()
   
   return(x)
 }
@@ -144,7 +144,7 @@ get_band_number <- function(obj){
 # get raster dims wrapper
 get_dims <- function(obj){
   
-  x = unlist(py_to_r(obj$get_dims()))
+  x = unlist(obj$get_dims())
   x <- split(x, ceiling(seq_along(unlist(x))/2))
   
   return(x)
@@ -155,7 +155,7 @@ get_dims <- function(obj){
 # get nodata value wrapper
 get_nodata_value <- function(obj){
   
-  x = py_to_r(obj$get_nodata_value())
+  x = obj$get_nodata_value()
   
   return(x)
 }
@@ -164,7 +164,7 @@ get_nodata_value <- function(obj){
 # get data wrapper
 get_data_array <- function(obj){
   
-  x = py_to_r(obj$get_data_array())
+  x = obj$get_data_array()
   
   return(x)
 }
@@ -174,7 +174,7 @@ get_data_array <- function(obj){
 # get GDAL data wrapper
 get_GDAL_data <- function(obj){
   
-  x = py_to_r(obj$get_GDAL_data())
+  x = obj$get_GDAL_data()
   
   return(x)
 }
@@ -184,7 +184,7 @@ get_GDAL_data <- function(obj){
 # get time wrapper
 get_time <- function(obj){
   
-  x = py_to_r(obj$get_time())
+  x = obj$get_time()
   
   return(x)
 }
@@ -193,7 +193,7 @@ get_time <- function(obj){
 # get var names wrapper
 get_var_names <- function(obj){
   
-  x = py_to_r(obj$get_var_names())
+  x = obj$get_var_names()
   
   return(x)
 }
