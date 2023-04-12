@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/spacetime_R/R/installation.R",
     "project_path": "R/installation.R",
     "type": "r_source",
-    "hash": "2713024561",
+    "hash": "735375190",
     "contents": "",
     "dirty": false,
     "created": 1681307637110.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "27,0",
-        "scrollLine": "5"
+        "cursorPosition": "9,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1681307696,
+    "lastKnownWriteTime": 1681310082,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1681307696484,
+    "last_content_update": 1681310082711,
     "read_only": false,
     "read_only_alternatives": []
 }
