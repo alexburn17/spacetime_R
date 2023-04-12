@@ -21,5 +21,6 @@ read_data <- NULL
   #make_cube <<- make_c$make_cube
 }
   
-
-  
+system.file("python", "rasterAlign", package = "spacetime", mustWork = TRUE)
+"/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/spacetime/python/scale/rasterAlign.py"
+"/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/spacetime/python/scale/"  
