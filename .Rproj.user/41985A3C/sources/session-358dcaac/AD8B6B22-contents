@@ -16,9 +16,8 @@ dataPaths <- list.files(path="/Users/pburnham/Documents/data", pattern="*.tif", 
 
 
 outPut <- spacetime::read_data(dataPaths)
-spacetime::get_lat(outPut)
-spacetime::get_lon(outPut)
 
+outPut$get_epsg_code()
 
 
 
