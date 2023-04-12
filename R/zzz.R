@@ -21,5 +21,3 @@ read_data <- NULL
   #make_cube <<- make_c$make_cube
 }
   
-
-  

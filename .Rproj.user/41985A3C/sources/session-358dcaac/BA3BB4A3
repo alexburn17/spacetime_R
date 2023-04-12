@@ -1,18 +1,18 @@
 {
-    "id": "B07FECB7",
-    "path": "~/Documents/GitHub/spacetime_R/inst/python/input/readdata.py",
-    "project_path": "inst/python/input/readdata.py",
+    "id": "BA3BB4A3",
+    "path": "~/Documents/GitHub/spacetime_R/inst/python/input/readData.py",
+    "project_path": "inst/python/input/readData.py",
     "type": "python",
-    "hash": "3843707120",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1681318314827.0,
+    "created": 1681329519355.0,
     "source_on_save": false,
-    "relative_order": 7,
+    "relative_order": 9,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "9,34",
+        "cursorPosition": "0,6",
         "scrollLine": "0"
     },
     "folds": "",
@@ -20,7 +20,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1681322495822,
+    "last_content_update": 1681322495,
     "read_only": false,
     "read_only_alternatives": []
 }
