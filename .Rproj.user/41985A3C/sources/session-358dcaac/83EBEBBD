@@ -1,12 +1,12 @@
 {
-    "id": "63E4CE0C",
-    "path": "~/Documents/GitHub/spacetime_R/inst/python/input/readData.py",
-    "project_path": "inst/python/input/readData.py",
+    "id": "83EBEBBD",
+    "path": "~/Documents/GitHub/spacetime_R/inst/python/input/spacetimetest.py",
+    "project_path": "inst/python/input/spacetimetest.py",
     "type": "python",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1681317594352.0,
+    "created": 1681318336184.0,
     "source_on_save": false,
     "relative_order": 7,
     "properties": {
@@ -14,11 +14,11 @@
         "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 1681130170,
+    "lastKnownWriteTime": 1681141972,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1681130170,
+    "last_content_update": 1681141972,
     "read_only": false,
     "read_only_alternatives": []
 }
