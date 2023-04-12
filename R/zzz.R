@@ -9,7 +9,6 @@ read_data <- NULL
   readData <- reticulate::import_from_path(module = "readData", system.file("python", "input", package = "spacetime", mustWork = TRUE))
   
   
-  
   get_array <<- the_mod$get_array
   read_data <<- readData$read_data
   
