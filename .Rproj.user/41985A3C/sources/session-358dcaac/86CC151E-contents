@@ -13,6 +13,23 @@ library(reticulate)
 ######### spacetime function wrappers #######
 #############################################
 
+
+
+
+install_miniconda <- function(data){
+  
+  user_permission <- utils::askYesNo("Install miniconda? downloads 50MB and takes time")
+
+  if (isTRUE(user_permission)) {
+    reticulate::install_miniconda(path = miniconda_path(), force = TRUE)
+  } else {
+    message("You should run `reticulate::install_miniconda()` before using this package")
+  }
+
+return(t)
+}
+
+
 do_a_thing<- function(data){
   
   t <- get_array()
