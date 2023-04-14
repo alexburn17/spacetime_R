@@ -3,7 +3,6 @@ from osgeo import gdal
 import os
 
 
-
 def read_data(dataList=None):
 
     fileData = []
