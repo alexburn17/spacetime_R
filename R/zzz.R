@@ -1,6 +1,6 @@
-#get_array <- NULL
-#read_data <- NULL
-#file_object <- NULL
+get_array <- NULL
+read_data <- NULL
+file_object <- NULL
 #raster_align <- NULL
 #raster_trim <- NULL
 #make_cube <- NULL
@@ -16,9 +16,9 @@
   #raster_t <- reticulate::import_from_path(module = "rasterTrim", system.file("python", "scale", package = "spacetime", mustWork = TRUE))
   #make_c <- reticulate::import_from_path(module = "makeCube", system.file("python", "operations", package = "spacetime", mustWork = TRUE))
   
-  get_array <<- the_mod$get_array
-  read_data <<- read_d$read_data
-  file_object <<- file_o$file_object
+  get_array <- the_mod$get_array
+  read_data <- read_d$read_data
+  file_object <- file_o$file_object
   #raster_align <<- raster_a$raster_align
   #raster_trim <<- raster_t$raster_trim
   #make_cube <<- make_c$make_cube
