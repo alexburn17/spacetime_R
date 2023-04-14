@@ -6,7 +6,6 @@ import os
 
 def read_data(dataList=None):
 
-    source_python("inst/python/objects/fileObject.py")
     fileData = []
     fileSize = []
 

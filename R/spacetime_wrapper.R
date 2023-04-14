@@ -38,6 +38,8 @@ do_a_thing<- function(data){
 
 # read data R wrapper
 read_data <- function(data){
+  
+  source_python("inst/python/objects/fileObject.py")
  
   ds = read_data(data)
   return(ds)
