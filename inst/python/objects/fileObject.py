@@ -4,7 +4,7 @@ import numpy as np
 import netCDF4 as nc
 
 
-class file_object(object):
+class file_object1(object):
 
     def __init__(self, dataList, sizes):
 
