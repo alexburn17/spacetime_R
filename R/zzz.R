@@ -1,6 +1,6 @@
-get_array <- NULL
-read_data <- NULL
-file_object <- NULL
+#get_array <- NULL
+#read_data <- NULL
+#file_object <- NULL
 #raster_align <- NULL
 #raster_trim <- NULL
 #make_cube <- NULL
