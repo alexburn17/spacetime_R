@@ -3,7 +3,7 @@ read_data <- NULL
 file_object1 <- NULL
 #raster_align <- NULL
 #raster_trim <- NULL
-#make_cube <- NULL
+#make_cube <- NULL\
 
 .onLoad <- function(libname, pkgname) {
 
