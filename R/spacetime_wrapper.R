@@ -18,7 +18,7 @@ library(reticulate)
 
 install_python_environment <- function(){
   
-  user_permission <- utils::askYesNo("Install python environment through miniconda? Miniconda is required for spacetime to run. If you havent already installed it, type yes")
+  user_permission <- utils::askYesNo("Install python environment through miniconda? Miniconda is required for spacetime  to run. If you havent already installed it, type yes")
 
   if (isTRUE(user_permission)) {
     reticulate::install_miniconda(path = miniconda_path(), force = TRUE)
