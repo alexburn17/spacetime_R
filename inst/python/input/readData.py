@@ -1,6 +1,7 @@
-from inst.python.objects.fileObject import *
+from spacetime_R.inst.python.objects.fileObject import *
 from osgeo import gdal
 import os
+
 
 
 def read_data(dataList=None):
