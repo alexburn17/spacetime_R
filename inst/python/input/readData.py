@@ -1,4 +1,4 @@
-from os.path.abspath(fileObject.py) import file_object
+from python.objects.fileObject import file_object
 from osgeo import gdal
 import os
 
