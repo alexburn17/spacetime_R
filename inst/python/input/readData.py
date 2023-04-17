@@ -1,4 +1,4 @@
-from spacetime.objects.fileObject import file_object
+from inst.python.objects.fileObject import file_object
 from osgeo import gdal
 import os
 
