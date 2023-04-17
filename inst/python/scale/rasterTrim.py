@@ -2,7 +2,7 @@ import re
 import numpy as np
 from osgeo import gdal
 import os
-from python.objects.fileObject import file_object
+from objects.fileObject import file_object
 
 
 ######################################################################################################################
