@@ -9,7 +9,7 @@ from spacetime.input.readData import read_data
 # into memory and ensures they have the same aligned structure with the correct SRS codes and consitant resolutions
 #
 # AUTHOR: P. Alexander Burnham
-# 5 August 2021
+# 5 August 2021 
 #
 # INPUTS:
 # rastNames (required): a list or array of file names including the required path if in another directory.
