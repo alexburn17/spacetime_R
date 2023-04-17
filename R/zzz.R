@@ -1,6 +1,6 @@
 get_array <- NULL
 read_data <- NULL
-file_object1 <- NULL
+file_object <- NULL
 #raster_align <- NULL
 #raster_trim <- NULL
 #make_cube <- NULL\
@@ -18,7 +18,7 @@ file_object1 <- NULL
   
   get_array <<- the_mod$get_array
   read_data <<- read_d$read_data
-  file_object1 <<- file_o$file_object1
+  file_object <<- file_o$file_object
   #raster_align <<- raster_a$raster_align
   #raster_trim <<- raster_t$raster_trim
   #make_cube <<- make_c$make_cube
