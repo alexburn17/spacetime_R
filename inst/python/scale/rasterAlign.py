@@ -1,5 +1,5 @@
 from osgeo import gdal
-from inst.python.objects.fileObject import file_object
+from spacetime.objects.fileObject import file_object
 import numpy as np
 from spacetime.input.readData import read_data
 
