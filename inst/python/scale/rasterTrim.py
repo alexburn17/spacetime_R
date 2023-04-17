@@ -2,7 +2,7 @@ import re
 import numpy as np
 from osgeo import gdal
 import os
-from os.path.dirname(os.path.abspath(fileObject.py)) import file_object
+from os.path.abspath(fileObject.py) import file_object
 
 
 ######################################################################################################################
