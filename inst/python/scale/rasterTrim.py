@@ -1,7 +1,9 @@
 import re
 import numpy as np
 from osgeo import gdal
-from inst.python.objects.fileObject import file_object
+import os
+import pathlib
+
 
 
 ######################################################################################################################
@@ -22,6 +24,10 @@ from inst.python.objects.fileObject import file_object
 ######################################################################################################################
 
 def raster_trim(data = None, method = "intersection", ul = None, lr = None, shapeFile = None):
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from objects.fileObject import file_object
 
     outList = [] # initialize a list
 

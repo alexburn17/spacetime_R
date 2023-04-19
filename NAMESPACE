@@ -4,8 +4,11 @@ import(reticulate)
 export(get_array)
 export(read_data)
 export(raster_align)
+export(raster_trim)
+
+
 
 #export(file_object)
 
-#export(raster_trim)
+
 #export(make_cube)
