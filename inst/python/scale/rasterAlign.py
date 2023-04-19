@@ -1,7 +1,5 @@
 from osgeo import gdal
-from inst.python.objects.fileObject import file_object
 import numpy as np
-from spacetime.input.readData import read_data
 
 
 ######################################################################################################################
@@ -21,6 +19,15 @@ from spacetime.input.readData import read_data
 # It outputs a list of rescaled and geospatialy aligned rasters
 ######################################################################################################################
 def raster_align(data=None, resolution="min", SRS=4326, noneVal=None, algorithm="near", template = None):
+  
+  
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from objects.fileObject import file_object
+    from input.readData import read_data
+    
+    
 
     if SRS == None:
         SRS_code = data.get_epsg_code()[0]
