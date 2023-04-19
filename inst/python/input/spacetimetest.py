@@ -5,7 +5,7 @@ def get_array():
   import os
   
   import pathlib
-  x = pathlib.Path(__file__).parent.resolve()
+  x = pathlib.Path(__file__).parent.parent.resolve()
 
   
   
