@@ -1,6 +1,7 @@
 from osgeo import gdal
 import numpy as np
-
+import os
+import pathlib
 
 ######################################################################################################################
 # DESCRIPTION: This function called raster_align takes a list of raster names, loads the rasters
