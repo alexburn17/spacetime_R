@@ -1,15 +1,13 @@
 from osgeo import gdal
 import os
-
 import pathlib
-y = pathlib.Path(__file__).parent.parent.resolve()
-os.chdir(y)
-  
-from objects.fileObject import file_object
-
 
 
 def read_data(dataList=None):
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from objects.fileObject import file_object
 
     fileData = []
     fileSize = []
