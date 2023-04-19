@@ -6,6 +6,8 @@ def get_array():
   
   import pathlib
   x = pathlib.Path(__file__).parent.parent.resolve()
+  
+  print(x + "/input/readData.py")
 
   
   

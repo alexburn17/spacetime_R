@@ -2,6 +2,11 @@
 from osgeo import gdal
 import os
 
+import pathlib
+x = pathlib.Path(__file__).parent.parent.resolve()
+
+
+
 def read_data(dataList=None):
 
     fileData = []
