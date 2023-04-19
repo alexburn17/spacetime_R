@@ -1,9 +1,11 @@
-#from spacetime.python.objects.fileObject import file_object
 from osgeo import gdal
 import os
 
 import pathlib
-x = pathlib.Path(__file__).parent.parent.resolve()
+y = pathlib.Path(__file__).parent.parent.resolve()
+os.chdir(y)
+  
+from objects.fileObject import file_object
 
 
 
