@@ -1,12 +1,17 @@
 import pandas as pd
 import netCDF4 as nc
 import numpy as np
-from spacetime.objects.interumCube import interum_cube
+import pathlib
+import os
 import xarray as xr
 
 
 ########################################################################################################################
 def cube_time(start=None, length=None, scale=None, skips = 1):
+         
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from objects.interumCube import interum_cube
 
     if scale == "year":
         skips = str(skips) + "Y"
@@ -29,6 +34,10 @@ def cube_time(start=None, length=None, scale=None, skips = 1):
 
 ########################################################################################################################
 def return_time(timeObject):
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)  
+    from objects.interumCube import interum_cube
 
     timeList = nc.num2date(timeObject, timeObject.units)
     a = [np.datetime64(x) for x in timeList]
@@ -44,7 +53,11 @@ def return_time(timeObject):
 
 ########################################################################################################################
 def select_time(cube, range="entire", scale = None, element=None):
-
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)  
+    from objects.interumCube import interum_cube
+    
     ds  = cube.get_data_array()
 
     if range == "entire":
@@ -89,6 +102,10 @@ def select_time(cube, range="entire", scale = None, element=None):
 
 ########################################################################################################################
 def scale_time(cube, scale, method):
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)  
+    from objects.interumCube import interum_cube
 
     format = cube.get_time()
 
