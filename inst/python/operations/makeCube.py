@@ -1,14 +1,22 @@
 import numpy as np
 import netCDF4 as nc
 from osgeo import gdal
-from spacetime.objects.cubeMeta import cube_meta
-from spacetime.objects.writeNETCDF import write_netcdf
-from spacetime.objects.cubeObject import cube
 from itertools import accumulate
 import string
 
 # todo: pass timeObj down to netcdf maker for if state
 def make_cube(data = None, fileName = None, organizeFiles="filestotime", organizeBands="bandstotime", varNames=None, timeObj=None, inMemory = "auto"):
+  
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from objects.cubeMeta import cube_meta
+    from objects.writeNETCDF import write_netcdf
+    from objects.cubeObject import cube
+  
+  
+  
+  
 
     if "file_object" in str(type(data)):
 
