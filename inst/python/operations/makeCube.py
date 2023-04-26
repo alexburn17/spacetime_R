@@ -13,8 +13,6 @@ def make_cube(data = None, fileName = None, organizeFiles="filestotime", organiz
     if "file_object" in str(type(data)):
 
 
-
-
         # merge gdal datasets to one interum gdal cube
         dataList = []
         tempMat = []
@@ -78,7 +76,7 @@ def make_cube(data = None, fileName = None, organizeFiles="filestotime", organiz
             fullCube = gdal.BuildVRT("", dataList, separate=True) # make a virtual cube for vrt layers
             gdalCube = cube_meta(fullCube) # make gdal cube to query data and metadata
 
-            preCube = write_netcdf(cube=gdalCube, dataset=outMat, fileName=fileName, organizeFiles = "filestotime", organizeBands = "bandstotime", timeObj = time) # make netcdf4 cube
+            preCube = write_netcdf(cube=gdalCube, dataset=outMat, fileName=fileName, organizeFiles_cdf = "filestotime", organizeBands = "bandstotime", timeObj = time) # make netcdf4 cube
             cubeObj = cube(preCube, fileStruc = "filestotime", timeObj=time, inMemory = inMemory, fileSize = sizes) # make a cube object
 
         if organizeFiles == "filestotime" and organizeBands == "bandstovar":
@@ -107,7 +105,7 @@ def make_cube(data = None, fileName = None, organizeFiles="filestotime", organiz
             #split into a list of arrays for each variable instead of for time
             dataOut = split_list(arranged, [1]*len(varNames), squeeze = True)
 
-            preCube = write_netcdf(cube=gdalCube[0], dataset=dataOut, fileName=fileName, organizeFiles = "filestovar", organizeBands="bandstotime", vars=varNames, timeObj = time) # make netcdf4 cube
+            preCube = write_netcdf(cube=gdalCube[0], dataset=dataOut, fileName=fileName, organizeFiles_cdf = "filestovar", organizeBands="bandstotime", vars=varNames, timeObj = time) # make netcdf4 cube
             cubeObj = cube(preCube, fileStruc = "filestovar", names=varNames, timeObj=time, inMemory = inMemory, fileSize = sizes)
 
         # if files are each one variable
@@ -138,7 +136,7 @@ def make_cube(data = None, fileName = None, organizeFiles="filestotime", organiz
             #split into a list of arrays for each variable instead of for time
             dataOut = split_list(arranged, [1]*len(varNames), squeeze = False)
 
-            preCube = write_netcdf(cube=gdalCube[0], dataset=dataOut, fileName=fileName, organizeFiles = "filestovar", organizeBands="bandstovar", vars=varNames, timeObj = time) # make netcdf4 cube
+            preCube = write_netcdf(cube=gdalCube[0], dataset=dataOut, fileName=fileName, organizeFiles_cdf = "filestovar", organizeBands="bandstovar", vars=varNames, timeObj = time) # make netcdf4 cube
             cubeObj = cube(preCube, fileStruc = "filestovar", names=varNames, timeObj=time, inMemory = inMemory, fileSize = sizes)
 
 
@@ -166,7 +164,7 @@ def make_cube(data = None, fileName = None, organizeFiles="filestotime", organiz
 
 
             # 0.0239 seconds SECOND SLOWEST SECTION
-            preCube = write_netcdf(cube=gdalCube[0], dataset=dataMerge, fileName=fileName, organizeFiles = "filestovar", organizeBands="bandstotime", vars=varNames, timeObj = time) # make netcdf4 cube
+            preCube = write_netcdf(cube=gdalCube[0], dataset=dataMerge, fileName=fileName, organizeFiles_cdf = "filestovar", organizeBands="bandstotime", vars=varNames, timeObj = time) # make netcdf4 cube
 
             # 0.0000062 seconds
             cubeObj = cube(preCube, fileStruc = "filestovar", names=varNames, timeObj=time, inMemory= inMemory, fileSize = sizes)
@@ -182,11 +180,11 @@ def make_cube(data = None, fileName = None, organizeFiles="filestotime", organiz
         sizes = data.get_file_size()
 
         if type(varNames) != type(None):
-            preCube = write_netcdf(cube=data, dataset=array, fileName=fileName, organizeFiles = "filestovar",organizeBands="bandstotime", vars=varNames, timeObj = time) # make netcdf4 cube
+            preCube = write_netcdf(cube=data, dataset=array, fileName=fileName, organizeFiles_cdf = "filestovar",organizeBands="bandstotime", vars=varNames, timeObj = time) # make netcdf4 cube
             cubeObj = cube(preCube, fileStruc = "filestovar", names=varNames, timeObj=time, fileSize = sizes)
 
         else:
-            preCube = write_netcdf(cube=data, dataset=array, fileName=fileName, organizeFiles = "filestotime", organizeBands="bandstotime" ,timeObj = time) # make netcdf4 cube
+            preCube = write_netcdf(cube=data, dataset=array, fileName=fileName, organizeFiles_cdf = "filestotime", organizeBands="bandstotime" ,timeObj = time) # make netcdf4 cube
             cubeObj = cube(preCube, fileStruc = "filestotime", timeObj=time, inMemory = inMemory, fileSize = sizes)
 
 
