@@ -67,11 +67,11 @@ raster_align <- function(data, resolution, SRS, noneVal){
 make_cube <- function(data, fileName, organizeFiles, organizeBands, varNames = "None", timeObj = "None"){
   # align rasters
   if(varNames == "None" & timeObj == "None"){
-    newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeFiles=organizeFiles)
+    newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeBands=organizeBands)
   } else if(varNames == "None" & timeObj != "None"){
-    newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeFiles=organizeFiles, timeObj=timeObj)
+    newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeBands=organizeBands, timeObj=timeObj)
   } else {
-    newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeFiles=organizeFiles, varNames=varNames, timeObj=timeObj)
+    newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeBands=organizeBands, varNames=varNames, timeObj=timeObj)
   }
   
   

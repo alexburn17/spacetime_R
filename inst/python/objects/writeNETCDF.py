@@ -1,7 +1,7 @@
 import numpy as np
 import netCDF4 as nc
 
-def write_netcdf(cube, dataset, fileName, organizeFiles_cdf, organizeBands, vars=None, timeObj=None):
+def write_netcdf(cube, dataset, fileName, organizeFiles, organizeBands, vars=None, timeObj=None):
 
     ds = nc.Dataset(fileName, 'w', format='NETCDF4')
 
@@ -34,7 +34,7 @@ def write_netcdf(cube, dataset, fileName, organizeFiles_cdf, organizeBands, vars
     ############################################################################################
     numVars = len(dataset[0].shape)
 
-    if organizeFiles_cdf == "filestovar" or organizeBands=="bandstovar":
+    if organizeFiles == "filestovar" or organizeBands=="bandstovar":
         
         for i in range(len(vars)):
 
@@ -75,7 +75,7 @@ def write_netcdf(cube, dataset, fileName, organizeFiles_cdf, organizeBands, vars
 
     # all files are times and must be stacked into one 3d cube
     ############################################################################################
-    if organizeFiles_cdf == "filestotime" and organizeBands == "bandstotime":
+    if organizeFiles == "filestotime" and organizeBands == "bandstotime":
 
         if 'xarray.core.dataarray.DataArray' in str(type(dataset)):
             value = ds.createVariable('value', 'f4', ('time', 'lat', 'lon',))
