@@ -4,14 +4,19 @@ import numpy as np
 import pandas as pd
 import netCDF4 as nc
 import re
-from spacetime.operations.time import cube_time, return_time
 import xarray as xr
 import psutil
+import pathlib
+import os
 
 
 class cube(object):
 
     def __init__(self, inputCube, fileStruc, timeObj, fileSize, names=None, inMemory = "auto"):
+      
+        y = pathlib.Path(__file__).parent.parent.resolve()
+        os.chdir(y)
+        from operations.time import cube_time, return_time
 
         # save as barracuda object
         self.cubeObj = inputCube
