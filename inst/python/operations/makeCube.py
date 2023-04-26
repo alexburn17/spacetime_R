@@ -3,6 +3,8 @@ import netCDF4 as nc
 from osgeo import gdal
 from itertools import accumulate
 import string
+import pathlib
+import os
 
 # todo: pass timeObj down to netcdf maker for if state
 def make_cube(data = None, fileName = None, organizeFiles="filestotime", organizeBands="bandstotime", varNames=None, timeObj=None, inMemory = "auto"):
