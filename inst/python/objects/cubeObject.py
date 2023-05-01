@@ -162,7 +162,7 @@ class cube(object):
         shapeVal = len(ds.shape)
         return shapeVal
       
-    def self.get_data(self)
+    def self.get_data(self):
         ds = self.get_data_array()
         out = ds.data
         return out
