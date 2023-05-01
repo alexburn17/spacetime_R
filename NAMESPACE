@@ -1,7 +1,6 @@
 # Export all names
 exportPattern(".")
 import(reticulate)
-export(get_array)
 export(read_data)
 export(raster_align)
 export(raster_trim)

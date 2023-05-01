@@ -19,7 +19,7 @@ import pathlib
 # OUTPUT:
 # It outputs a list of rescaled and geospatialy aligned rasters
 ######################################################################################################################
-def raster_align(data=None, resolution="min", SRS=4326, noneVal=None, algorithm="near", template = None):
+def raster_align(data=None, resolution="min", SRS=4326, noneVal=None, algorithm="near"):
   
   
   
