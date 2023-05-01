@@ -3,8 +3,10 @@ read_data <- NULL
 raster_align <- NULL
 raster_trim <- NULL
 make_cube <- NULL
+options("install.lock"=FALSE)
 
 .onLoad <- function(libname, pkgname) {
+  options("install.lock"=FALSE)
 
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
