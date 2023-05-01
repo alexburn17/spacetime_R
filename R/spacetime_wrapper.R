@@ -110,7 +110,7 @@ make_cube <- function(data, fileName, organizeFiles = "filestotime", organizeBan
   } else if(varNames == "None" & timeObj != "None"){
     newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeBands=organizeBands, timeObj=timeObj, inMemory = inMemory)
   } else {
-    newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeBands=organizeBands, varNames=varNames, timeObj=timeObjinMemory = inMemory)
+    newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeBands=organizeBands, varNames=varNames, timeObj=timeObj, inMemory = inMemory)
   }
   
   
