@@ -6,3 +6,4 @@ Description: A package for working with complex spatiotemporal datasets.
 Author: P. Alexander Burnham <pburnham@uvm.edu>
 Maintainer: P. Alexander Burnham <pburnham@uvm.edu>
 Imports: reticulate
+RoxygenNote: 7.2.3
