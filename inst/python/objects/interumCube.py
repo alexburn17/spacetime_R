@@ -95,3 +95,8 @@ class interum_cube(object):
         ds = self.get_data_array()
         shapeVal = len(ds.shape)
         return shapeVal
+      
+    def get_data(self, variables=None):
+        ds = self.array
+        out = ds.data
+        return out

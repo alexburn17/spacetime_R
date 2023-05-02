@@ -265,4 +265,28 @@ class file_object(object):
         return outList
 
 
+    def get_data(self): # this is slow (SPEED IT UP)
+
+        outList = []
+
+        for i in range(len(self.spacetimeObject[0])):
+
+            tempMat = []
+            obj = self.spacetimeObject[0][i]
+
+            for j in range(self.get_band_number()[i]):
+
+                import time
+                start = time.time()
+
+                band = obj.GetRasterBand(j+1).ReadAsArray()
+                tempMat.append(band)
+
+                end = time.time()
+                #print(end - start)
+
+            outMat = np.stack(tempMat, axis=2)
+            outList.append(outMat)
+
+        return outList
 
