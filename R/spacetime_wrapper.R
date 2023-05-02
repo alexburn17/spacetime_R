@@ -27,7 +27,7 @@ install_python_environment <- function(){
   if (isTRUE(user_permission)) {
     reticulate::install_miniconda(path = miniconda_path(), force = TRUE)
   } else {
-    message("You are all set !")
+    message("You are all set!")
   }
 
 }
