@@ -3,7 +3,6 @@ library(reticulate)
 
 
 ########################################################################################################################
-
 # Begin R script
 ########################################################################################################################
 
@@ -29,7 +28,6 @@ install_python_environment <- function(){
   } else {
     message("You are all set!")
   }
-
 }
 
 
@@ -112,7 +110,6 @@ make_cube <- function(data, fileName, organizeFiles = "filestotime", organizeBan
   } else {
     newObj = make_cube(data = data, fileName = fileName, organizeFiles = organizeFiles, organizeBands=organizeBands, varNames=varNames, timeObj=timeObj, inMemory = inMemory)
   }
-  
   
   return(newObj)
   
