@@ -1,8 +1,12 @@
 import pandas as pd
-from spacetime.operations.cubeToDataframe import cube_to_dataframe
-
+import pathlib
+import os
 
 def write_csv(cube=None, file_name=None):
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from operations.cubeToDataframe import cube_to_dataframe
 
     shapeval = cube.get_shapeval()
     df = cube_to_dataframe(cube)
