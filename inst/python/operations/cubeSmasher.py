@@ -1,10 +1,16 @@
 import numpy as np
 import netCDF4 as nc
-from spacetime.objects.interumCube import interum_cube
 import xarray as xr
+import os
+import pathlib
 
 def cube_smasher(function = None, eq = None, parentCube = None, **kwarg):
-
+  
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from objects.interumCube import interum_cube
+    
     # is there a parent cube and what is the file structure?
     if parentCube != None:
         if type(parentCube.get_var_names()) == type(None):
