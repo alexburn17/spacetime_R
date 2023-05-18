@@ -1,10 +1,14 @@
 import netCDF4 as nc
 import numpy as np
-from spacetime.objects.cubeObject import cube
-from spacetime.operations.time import cube_time, return_time
+import pathlib
 import os
 
 def load_cube(file):
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from objects.cubeObject import cube
+    from operations.time import cube_time, return_time
 
     # get data set
     ds = nc.Dataset(file)
