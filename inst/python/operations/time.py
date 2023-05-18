@@ -142,6 +142,10 @@ def scale_time(cube, scale, method):
 ####
 
 def expand_time(cube, target_time, starting_scale = "month", target_scale = "day"):
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)  
+    from objects.interumCube import interum_cube
 
     startTime = cube.get_time()
     array = cube.get_data_array()
