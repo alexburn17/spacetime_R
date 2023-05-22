@@ -21,7 +21,7 @@ options("install.lock"=FALSE)
   cube_s <- reticulate::import_from_path(module = "cubeSmasher", system.file("python", "operations", package = "spacetime", mustWork = TRUE))
   write_c <- reticulate::import_from_path(module = "writeCSV", system.file("python", "output", package = "spacetime", mustWork = TRUE))
   load_c <- reticulate::import_from_path(module = "loadCube", system.file("python", "operations", package = "spacetime", mustWork = TRUE))
-  cube_t <- reticulate::import_from_path(module = "time", system.file("python", "operations", package = "spacetime", mustWork = TRUE)) 
+  cube_t <- reticulate::import_from_path(module = "changeTime", system.file("python", "operations", package = "spacetime", mustWork = TRUE)) 
    
   read_data <<- read_d$read_data
   raster_align <<- raster_a$raster_align

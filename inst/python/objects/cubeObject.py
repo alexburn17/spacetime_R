@@ -16,7 +16,7 @@ class cube(object):
       
         y = pathlib.Path(__file__).parent.parent.resolve()
         os.chdir(y)
-        from operations.time import cube_time, return_time
+        from operations.changeTime import cube_time, return_time
 
         # save as barracuda object
         self.cubeObj = inputCube
