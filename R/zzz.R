@@ -7,6 +7,9 @@ write_csv <- NULL
 load_cube <- NULL
 cube_time <- NULL
 return_time <- NULL
+select_time <- NULL
+scale_time <- NULL
+expand_time <- NULL
 
 options("install.lock"=FALSE)
 
@@ -33,5 +36,8 @@ options("install.lock"=FALSE)
   load_cube <<- load_c$load_cube
   cube_time <<- cube_t$cube_time
   return_time <<- cube_t$return_time
+  select_time <<- cube_t$select_time
+  scale_time <<- cube_tscale_time
+  expand_time <<- cube_t$expand_time
 }
   
