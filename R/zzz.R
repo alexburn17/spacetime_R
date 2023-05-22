@@ -6,6 +6,7 @@ cube_smasher <- NULL
 write_csv <- NULL
 load_cube <- NULL
 cube_time <- NULL
+return_time <- NULL
 
 options("install.lock"=FALSE)
 
@@ -31,5 +32,6 @@ options("install.lock"=FALSE)
   write_csv <<- write_c$write_csv
   load_cube <<- load_c$load_cube
   cube_time <<- cube_t$cube_time
+  return_time <<- cube_t$return_time
 }
   
