@@ -37,7 +37,7 @@ options("install.lock"=FALSE)
   cube_time <<- cube_t$cube_time
   return_time <<- cube_t$return_time
   select_time <<- cube_t$select_time
-  scale_time <<- cube_tscale_time
+  scale_time <<- cube_t$scale_time
   expand_time <<- cube_t$expand_time
 }
   
