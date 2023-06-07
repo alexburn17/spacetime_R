@@ -56,6 +56,10 @@ class cube(object):
         return out
 
     def get_time(self):
+      
+        y = pathlib.Path(__file__).parent.parent.resolve()
+        os.chdir(y)
+        from operations.changeTime import cube_time, return_time
 
         if self.noTime == True:
             out = self.cubeObj.variables["time"][:]
@@ -109,6 +113,10 @@ class cube(object):
         return out
 
     def get_data_array(self, variables=None):
+      
+        y = pathlib.Path(__file__).parent.parent.resolve()
+        os.chdir(y)
+        from operations.changeTime import cube_time, return_time
 
         if self.fileStruc == "filestotime":
             out = self.cubeObj.variables[self.ind][:]
