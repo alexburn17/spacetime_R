@@ -13,7 +13,7 @@ def cube_time(start=None, length=None, scale=None, skips = 1):
     os.chdir(y)
     from objects.interumCube import interum_cube
     
-    skips = truncate(skips)
+    skips = math.trunc(skips)
 
     if scale == "year":
         skips = str(skips) + "Y"
