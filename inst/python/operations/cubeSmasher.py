@@ -4,7 +4,7 @@ import xarray as xr
 import os
 import pathlib
 
-def cube_smasher(function = None, eq = None, parentCube = None, **kwarg):
+def cube_smasher(functionName = None, eq = None, parentCube = None, **kwarg):
   
   
     y = pathlib.Path(__file__).parent.parent.resolve()
@@ -29,11 +29,11 @@ def cube_smasher(function = None, eq = None, parentCube = None, **kwarg):
                 kwarg[key] = kwarg[key].get_data_array().to_numpy()
 
     # do operations as below
-    if function == None:
+    if functionName == None:
         y = eval(eq, kwarg)
 
     if eq == None:
-        y = function(**kwarg)
+        y = functionName(**kwarg)
 
     if parentCube == None:
         out = y
