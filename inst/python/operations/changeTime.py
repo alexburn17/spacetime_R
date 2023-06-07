@@ -3,7 +3,6 @@ import netCDF4 as nc
 import numpy as np
 import pathlib
 import os
-import math
 import xarray as xr
 
 
@@ -14,7 +13,7 @@ def cube_time(start=None, length=None, scale=None, skips = 1):
     os.chdir(y)
     from objects.interumCube import interum_cube
     
-    skips = math.trunc(skips)
+    skips = int(skips)
 
     if scale == "year":
         skips = str(skips) + "Y"
