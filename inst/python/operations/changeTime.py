@@ -12,6 +12,8 @@ def cube_time(start=None, length=None, scale=None, skips = 1):
     y = pathlib.Path(__file__).parent.parent.resolve()
     os.chdir(y)
     from objects.interumCube import interum_cube
+    
+    skips = truncate(skips)
 
     if scale == "year":
         skips = str(skips) + "Y"
