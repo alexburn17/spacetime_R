@@ -10,6 +10,7 @@ return_time <- NULL
 select_time <- NULL
 scale_time <- NULL
 expand_time <- NULL
+cube_to_dataframe <- NULL
 
 options("install.lock"=FALSE)
 
@@ -26,7 +27,8 @@ options("install.lock"=FALSE)
   write_c <- reticulate::import_from_path(module = "writeCSV", system.file("python", "output", package = "spacetime", mustWork = TRUE))
   load_c <- reticulate::import_from_path(module = "loadCube", system.file("python", "operations", package = "spacetime", mustWork = TRUE))
   cube_t <- reticulate::import_from_path(module = "changeTime", system.file("python", "operations", package = "spacetime", mustWork = TRUE)) 
-   
+  cube_td <- reticulate::import_from_path(module = "cubeToDataframe", system.file("python", "operations", package = "spacetime", mustWork = TRUE))   
+  
   read_data <<- read_d$read_data
   raster_align <<- raster_a$raster_align
   raster_trim <<- raster_t$raster_trim
@@ -39,5 +41,7 @@ options("install.lock"=FALSE)
   select_time <<- cube_t$select_time
   scale_time <<- cube_t$scale_time
   expand_time <<- cube_t$expand_time
+  cube_to_dataframe <<- cube_td$cube_to_dataframe
+  
 }
   
