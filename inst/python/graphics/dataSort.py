@@ -4,14 +4,20 @@ import pandas as pd
 import numpy as np
 
 from typing import Tuple, List
+import os
+import pathlib
 
-from spacetime.operations.cubeToDataframe import cube_to_dataframe
 
 
 # Main Method
 ########################################################################################################################
 # Process Cube data for chart plotting
 def organize_dataframe(cube, plot_type, variable, summary) -> pd.DataFrame:
+  
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from operations.cubeToDataframe import cube_to_dataframe
+  
     df = cube_to_dataframe(cube)
     shape_val = cube.get_shapeval()
 
