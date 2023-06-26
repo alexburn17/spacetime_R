@@ -1,6 +1,7 @@
 library(reticulate)
 
-options("install.lock"=FALSE)
+#options("install.lock"=FALSE)
+getOption("install.lock", FALSE) 
 
 # python packages to install
 dependancies <- c("pandas", "numpy")

@@ -12,10 +12,12 @@ scale_time <- NULL
 expand_time <- NULL
 cube_to_dataframe <- NULL
 
-options("install.lock"=FALSE)
+#options("install.lock"=FALSE)
+getOption("install.lock", FALSE) 
 
 .onLoad <- function(libname, pkgname) {
-  options("install.lock"=FALSE)
+  #options("install.lock"=FALSE)
+  getOption("install.lock", FALSE) 
 
   use_condaenv(condaenv = "r-reticulate", conda = "auto", required = TRUE)
   
