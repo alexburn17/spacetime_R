@@ -20,6 +20,7 @@ conda_install("r-reticulate", "xarray")
 conda_install("r-reticulate", "psutil")
 conda_install("r-reticulate", "plotly_express")
 conda_install("r-reticulate", "netCDF4")
+conda_install("r-reticulate", "statsmodels")
 
 
 

@@ -11,8 +11,9 @@ from typing import Optional, Union, Tuple
 import statsmodels.api as sm
 import datetime
 import math
+import os
+import pathlib
 
-from spacetime.graphics.dataSort import sort_dataframe, organize_dataframe
 
 # Style color presets
 COLOR_STYLES = {
@@ -150,6 +151,12 @@ def plot_cube(
         show_plot: <accepted types: boolean>
                 Allows the user to turn off automatic chart output.
     """
+
+    
+    y = pathlib.Path(__file__).parent.parent.resolve()
+    os.chdir(y)
+    from graphics.dataSort import sort_dataframe, organize_dataframe
+    
 
     df_plot = organize_dataframe(cube, plot_type, variable, summary)
 

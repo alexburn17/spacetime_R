@@ -11,6 +11,7 @@ select_time <- NULL
 scale_time <- NULL
 expand_time <- NULL
 cube_to_dataframe <- NULL
+plot_cube <- NULL
 
 #options("install.lock"=FALSE)
 getOption("install.lock", FALSE) 
@@ -30,7 +31,10 @@ getOption("install.lock", FALSE)
   load_c <- reticulate::import_from_path(module = "loadCube", system.file("python", "operations", package = "spacetime", mustWork = TRUE))
   cube_t <- reticulate::import_from_path(module = "changeTime", system.file("python", "operations", package = "spacetime", mustWork = TRUE)) 
   cube_td <- reticulate::import_from_path(module = "cubeToDataframe", system.file("python", "operations", package = "spacetime", mustWork = TRUE))   
+  plot_c <- reticulate::import_from_path(module = "dataPlot", system.file("python", "graphics", package = "spacetime", mustWork = TRUE))
   
+  
+  plot_cube <<- plot_c$plot_cube
   read_data <<- read_d$read_data
   raster_align <<- raster_a$raster_align
   raster_trim <<- raster_t$raster_trim
