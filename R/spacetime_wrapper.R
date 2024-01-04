@@ -88,7 +88,6 @@ raster_align <- function(data, noneVal, resolution = "min", SRS = 4326, algorith
 }
 
 
-
 #' Creates a spacetime cube object and writes a .nc4 file to disk
 #'
 #' @param data A spacetime file object

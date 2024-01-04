@@ -152,6 +152,7 @@ def expand_time(cube, target_time, starting_scale = "month", target_scale = "day
     startTime = cube.get_time()
     array = cube.get_data_array()
     numVars = len(array.shape)
+    target_time = target_time.get_time()
 
     if starting_scale == "month" and target_scale == "day":
 
