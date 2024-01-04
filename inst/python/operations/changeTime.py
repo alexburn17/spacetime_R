@@ -171,8 +171,8 @@ def expand_time(cube, target_time, starting_scale = "month", target_scale = "day
         if numVars == 3:
 
             outMat = xr.DataArray(data=out, dims=["time", "lat", "lon"], coords=dict(
-               lon=(["lon"], cube.get_lon()),
-               lat=(["lat"], cube.get_lat()),
+               lon=(["lon"], cube.get_lon().data),
+               lat=(["lat"], cube.get_lat().data),
                time=target_time))
 
         if numVars > 3:
@@ -185,8 +185,8 @@ def expand_time(cube, target_time, starting_scale = "month", target_scale = "day
 
             out = xr.DataArray(data=intDS, dims=["variables", "time", "lat", "lon"], coords=dict(
                   variables = (["variables"], self.names),
-                  lon=(["lon"], self.get_lon()),
-                  lat=(["lat"], self.get_lat()),
+                  lon=(["lon"], self.get_lon().data),
+                  lat=(["lat"], self.get_lat().data),
                   time=self.get_time()))
 
 
